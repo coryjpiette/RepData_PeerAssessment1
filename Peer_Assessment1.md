@@ -1,4 +1,4 @@
-Reproducible Research Project1
+Reproducible Research Peer Assessment Project 1
 ==============================
 # Loading and preprocessing the data
 
