@@ -1,6 +1,6 @@
 Reproducible Research Peer Assessment Project 1
 ==============================
-# Loading and preprocessing the data
+# Loading/preprocessing the data
 
 ```r
     url = "https://d396qusza40orc.cloudfront.net/repdata%2Fdata%2Factivity.zip"
@@ -14,14 +14,14 @@ Reproducible Research Peer Assessment Project 1
 ## [1] "steps"    "date"     "interval"
 ```
 
-## Process/transform the data (if necessary) into a format suitable for your analysis
+## Process and transform the data
 
 ```r
     mydata$date <- as.Date(mydata$date, "%Y-%m-%d")
 ```
 
-# What is mean and median of the total number of steps taken per day?
-## plot histogram with mean and median lines added
+# Mean and median of the total number of steps taken per day
+## plot histogram with mean and median 
 
 ```r
     nsteps = aggregate(steps ~ date, mydata, FUN=sum, na.rm=T)
@@ -51,7 +51,7 @@ Reproducible Research Peer Assessment Project 1
 Mean and median of the total number of steps taken per day 10766.19 and 10765.
 
 
-# What is the average daily activity pattern?
+# Average daily activity pattern
 ## line plot with interval and steps
 
 ```r
@@ -72,7 +72,7 @@ Mean and median of the total number of steps taken per day 10766.19 and 10765.
 On average across all the days in the dataset, the 835 interval contains the maximum number of steps.
 
 # Imputing missing values
-## Calculate and report the total number of missing values in the dataset (i.e. the total number of rows with NAs)
+## Calculate and report the total # of missing values in the dataset
 
 ```r
     nrow(mydata[is.na(mydata$steps),])
@@ -82,7 +82,7 @@ On average across all the days in the dataset, the 835 interval contains the max
 ## [1] 2304
 ```
 
-## Devise a strategy for filling in all of the missing values in the dataset. The strategy does not need to be sophisticated. For example, you could use the mean/median for that day, or the mean for that 5-minute interval, etc.
+## Fill in missing values in the dataset. 
 
 ```r
     NAdata = mydata[is.na(mydata$steps),]    
@@ -96,7 +96,7 @@ On average across all the days in the dataset, the 835 interval contains the max
     newdata = rbind(NAdata,gooddata)
 ```
 
-## Make a histogram of the total number of steps taken each day and Calculate and report the mean and median total number of steps taken per day. 
+## Histogram pf the total steps taken each day / Calculate the mean and median total number of steps taken per day. 
 
 ```r
     nsteps = aggregate(steps ~ date, newdata, FUN=sum, na.rm=T)
