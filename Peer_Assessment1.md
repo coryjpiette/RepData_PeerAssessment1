@@ -47,7 +47,7 @@ Reproducible Research Project1
     legend("topright",lty=c(1,2),col=c("blue","red"),legend=c("Mean","Median"))
 ```
 
-![plot of chunk unnamed-chunk-3](figure/unnamed-chunk-3-1.png)
+![plot of chunk unnamed-chunk-3](unnamed-chunk-3-1.png)
 Mean and median of the total number of steps taken per day 10766.19 and 10765.
 
 
@@ -59,7 +59,7 @@ Mean and median of the total number of steps taken per day 10766.19 and 10765.
     plot(meanInt$interval,meanInt$steps,type="l",xlab="5min interval",ylab="mean steps",main="average daily activity")
 ```
 
-![plot of chunk unnamed-chunk-4](figure/unnamed-chunk-4-1.png)
+![plot of chunk unnamed-chunk-4](unnamed-chunk-4-1.png)
 
 ```r
     meanInt[which.max(meanInt$steps),]
