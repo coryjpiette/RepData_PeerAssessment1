@@ -122,7 +122,7 @@ On average across all the days in the dataset, the 835 interval contains the max
     legend("topright",lty=c(1,2),col=c("blue","red"),legend=c("Mean","Median"))
 ```
 
-![plot of chunk unnamed-chunk-8](figure/unnamed-chunk-8-1.png)
+![plot of chunk unnamed-chunk-8](unnamed-chunk-8-1.png)
 The mean and median total number of steps taken per day changed to be the same after imputing missing data on the estimates of the total daily number of steps.
 
 # Are there differences in activity patterns between weekdays and weekends?
@@ -141,4 +141,4 @@ The mean and median total number of steps taken per day changed to be the same a
     g + geom_line() + facet_grid(dayf~.) + labs(title="average Steps vs. days", y="steps", x= "5min interval")
 ```
 
-![plot of chunk unnamed-chunk-10](figure/unnamed-chunk-10-1.png)
+![plot of chunk unnamed-chunk-10](unnamed-chunk-10-1.png)
